@@ -1,38 +1,40 @@
-============================================
-  FLIGHT ROUTE TRACKER - Java Mini Project
-============================================
+✈️ Flight Route Tracker
+A console-based Java Mini Project for managing flights, routes, and seat bookings — like a mini airport management system running in your terminal.
 
-FILES:
-  Flight.java          - Flight class (data model)
-  Route.java           - Route class (data model)
-  FlightManager.java   - Business logic (CRUD operations)
-  FlightRouteTracker.java - Main class (menu & UI)
+📌 Features
+#FeatureDescription1View All FlightsSee all flights in a clean table format2Add New FlightAdd flight number, route, time, seats3Search FlightsFilter by route or status4Update StatusScheduled → Active → Landed / Delayed / Cancelled5Seat BookingBook or cancel a seat, occupancy is tracked6Delete FlightRemove any flight from the system7View RoutesSee city-to-city routes and distances8Add New RouteAdd a new airline route9DashboardSummary — total flights, status breakdown, occupancy %
 
-HOW TO RUN:
-  Step 1: Compile karo
-    javac *.java
+🗂️ Project Structure
+FlightRouteTracker/
+│
+├── Flight.java              # Flight data model (getters, setters)
+├── Route.java               # Route data model
+├── FlightManager.java       # Business logic — add, search, update, delete
+└── FlightRouteTracker.java  # Main class — menu & user interaction
 
-  Step 2: Run karo
-    java FlightRouteTracker
+🚀 How to Run
+Requirements: Java 14 or higher (JDK)
+bash# Step 1: Compile
+javac *.java
 
-FEATURES:
-  1. Sabhi flights dekhein (table format mein)
-  2. Naya flight add karein
-  3. Search - route ya status se
-  4. Flight status update karein
-  5. Seat book / cancel karein
-  6. Flight delete karein
-  7. Routes dekhein
-  8. Naya route add karein
-  9. Dashboard - summary stats
+# Step 2: Run
+java FlightRouteTracker
 
-CONCEPTS USED:
-  - OOP (Classes, Objects, Encapsulation)
-  - ArrayList, HashMap, Stream API
-  - Scanner (user input)
-  - Switch expressions (Java 14+)
-  - Method overloading
-  - Collections framework
+🧠 Java Concepts Used
 
-Requirements: Java 14+ (JDK)
-============================================
+OOP — Classes, Objects, Encapsulation
+Collections — ArrayList, HashMap, LinkedHashMap
+Stream API — filtering, mapping, aggregation
+Scanner — console input handling
+Switch Expressions — Java 14+ syntax
+Method design — helper methods, input validation
+
+
+📊 Sample Data (Preloaded)
+FlightRouteStatusAI-101Mumbai → DelhiActive6E-302Delhi → BengaluruScheduledSG-501Mumbai → ChennaiLandedUK-890Kolkata → HyderabadDelayedI5-202Delhi → GoaActive
+
+📁 Class Responsibilities
+Flight.java — Represents a single flight with flight number, origin, destination, departure/arrival time, status, total seats, and booked seats.
+Route.java — Represents a city-to-city route with origin, destination, distance in km, airline name, and flight count on that route.
+FlightManager.java — Contains all the core logic: add, search, update status, book/cancel seats, delete flights, and generate dashboard summary.
+FlightRouteTracker.java — Main class that prints the menu, reads user input, and calls FlightManager methods accordingly.
